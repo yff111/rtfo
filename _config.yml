@@ -22,8 +22,13 @@ defaults:
     layout: post
     permalink: "/posts/:title/"
 - scope:
+    path: '*.json'
+    type: pages
+  values:
+    layout: plain
+- scope:
     path: ''
     type: pages
   values:
-    layout: page
+    layout: default
 permalink: pretty

@@ -1,0 +1,20 @@
+---
+limit: 100
+---
+
+[
+{% for post in site.inspiration limit: page.limit %}
+    
+    {
+      "title": "{{ post.title }}",
+      "date"     : "{{ post.date | date: "%B %d, %Y" }}",
+      "excerpt" : "{{ post.excerpt | newline_to_br | escape_once | strip }}",
+     "categories"  : {{ post.categories | jsonify}},
+     "tags"  : {{ post.categories | jsonify}}
+
+    }
+
+    {% unless forloop.last %},{% endunless %}
+
+{% endfor %}
+]
