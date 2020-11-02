@@ -22,7 +22,7 @@ defaults:
     layout: post
     permalink: "/posts/:title/"
 - scope:
-    path: '*.json'
+    path: "*.json"
     type: pages
   values:
     layout: plain
